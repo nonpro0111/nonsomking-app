@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KKv-AR-5b6">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SmokingInfoItem" rowHeight="100" id="KKv-AR-5b6" customClass="SmokingInfoItemTableViewCell" customModule="NonSmokingSupportTimer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KKv-AR-5b6" id="5RB-zz-93f">
@@ -64,8 +64,16 @@
                                                 <constraint firstItem="4xs-BX-6Kd" firstAttribute="top" secondItem="5RB-zz-93f" secondAttribute="top" constant="20" id="wE0-EN-UtO"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="infoName" destination="Gr7-qQ-mhG" id="2Ba-v4-JEd"/>
+                                            <outlet property="infoValue" destination="4xs-BX-6Kd" id="CE8-g0-5oA"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Iyy-cl-fJl"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="tKg-dh-JMd"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -76,6 +84,9 @@
                             <constraint firstItem="sF8-jG-GDL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vzz-rv-EP1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="sF8-jG-GDL" id="I5F-Ir-HQF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

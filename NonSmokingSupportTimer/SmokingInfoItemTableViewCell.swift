@@ -9,6 +9,8 @@
 import UIKit
 
 class SmokingInfoItemTableViewCell: UITableViewCell {
+  @IBOutlet weak var infoName: UILabel!
+  @IBOutlet weak var infoValue: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
