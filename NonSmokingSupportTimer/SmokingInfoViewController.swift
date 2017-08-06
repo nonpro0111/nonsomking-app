@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SmokingInfoViewController.swift
 //  NonSmokingSupportTimer
 //
 //  Created by nomura yoshihiro on 2017/08/06.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SmokingInfoViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
