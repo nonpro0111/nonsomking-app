@@ -24,6 +24,48 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sF8-jG-GDL">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KKv-AR-5b6">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KKv-AR-5b6" id="5RB-zz-93f">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="禁煙情報" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gr7-qQ-mhG">
+                                                    <rect key="frame" x="20" y="20" width="80" height="59"/>
+                                                    <color key="backgroundColor" red="0.98800442202681849" green="0.99257433893210656" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="Sl9-6j-chi"/>
+                                                        <constraint firstAttribute="height" constant="59" id="tO6-Jh-oDz"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="データ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xs-BX-6Kd">
+                                                    <rect key="frame" x="140" y="20" width="80" height="59"/>
+                                                    <color key="backgroundColor" red="0.98800442202681849" green="0.99257433893210656" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="59" id="Rr7-Vy-Eta"/>
+                                                        <constraint firstAttribute="width" constant="80" id="qiT-fa-C4E"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Gr7-qQ-mhG" firstAttribute="top" secondItem="5RB-zz-93f" secondAttribute="top" constant="20" id="C6C-ZV-Zu1"/>
+                                                <constraint firstAttribute="bottom" secondItem="4xs-BX-6Kd" secondAttribute="bottom" constant="20" id="LdW-qo-nht"/>
+                                                <constraint firstAttribute="bottom" secondItem="Gr7-qQ-mhG" secondAttribute="bottom" constant="20" id="R0M-jL-O08"/>
+                                                <constraint firstItem="4xs-BX-6Kd" firstAttribute="leading" secondItem="Gr7-qQ-mhG" secondAttribute="trailing" constant="40" id="SnL-GY-f3e"/>
+                                                <constraint firstItem="Gr7-qQ-mhG" firstAttribute="leading" secondItem="5RB-zz-93f" secondAttribute="leading" constant="20" id="WZY-8o-iVv"/>
+                                                <constraint firstItem="4xs-BX-6Kd" firstAttribute="top" secondItem="5RB-zz-93f" secondAttribute="top" constant="20" id="wE0-EN-UtO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
