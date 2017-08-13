@@ -9,10 +9,41 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Setting View Controller-->
+        <scene sceneID="iN8-bp-8zO">
+            <objects>
+                <viewController storyboardIdentifier="settingView" id="YKI-2y-AuB" customClass="settingViewController" customModule="NonSmokingSupportTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CHT-qJ-sJC"/>
+                        <viewControllerLayoutGuide type="bottom" id="SSu-Qh-ald"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FBL-gD-yFT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3b-Iz-22Q">
+                                <rect key="frame" x="164" y="437" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="設定"/>
+                                <connections>
+                                    <action selector="setUp:" destination="YKI-2y-AuB" eventType="touchUpInside" id="QWG-ly-aY6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="setUpButton" destination="p3b-Iz-22Q" id="EIv-Tt-K5K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oi1-PO-jzn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-574" y="135"/>
+        </scene>
         <!--Smoking Info View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SmokingInfoViewController" customModule="NonSmokingSupportTimer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="smokingInfoView" id="BYZ-38-t0r" customClass="SmokingInfoViewController" customModule="NonSmokingSupportTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
