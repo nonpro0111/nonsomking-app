@@ -32,7 +32,7 @@ class SmokingInfoViewController: UIViewController, UITableViewDelegate, UITableV
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if section == 0 {
       // セル数
-      return 20
+      return 1
     }
     return 0
   }
@@ -41,7 +41,6 @@ class SmokingInfoViewController: UIViewController, UITableViewDelegate, UITableV
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     if indexPath.section == 0 {
       let cell = tableView.dequeueReusableCell(withIdentifier: "SmokingInfoItem") as! SmokingInfoItemTableViewCell
-      cell.infoName.text = "hoge"
 
       return cell
     }
