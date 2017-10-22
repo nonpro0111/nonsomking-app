@@ -17,7 +17,7 @@ struct UserData {
   let num: Int
   let nonSmokingAt: Date
   let numPerSec: Double
-  let nonSmokingSec: Int
+  var nonSmokingSec: Int
   let userDefaults = UserDefaults.standard
 
 
