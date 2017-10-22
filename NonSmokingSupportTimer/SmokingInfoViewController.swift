@@ -11,6 +11,9 @@ import UIKit
 class SmokingInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   @IBOutlet weak var tableView: UITableView!
+
+  let items = UserData().tableViewData()
+
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -32,7 +35,7 @@ class SmokingInfoViewController: UIViewController, UITableViewDelegate, UITableV
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if section == 0 {
       // セル数
-      return 1
+      return 6
     }
     return 0
   }
@@ -41,7 +44,9 @@ class SmokingInfoViewController: UIViewController, UITableViewDelegate, UITableV
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     if indexPath.section == 0 {
       let cell = tableView.dequeueReusableCell(withIdentifier: "SmokingInfoItem") as! SmokingInfoItemTableViewCell
-
+      let item = items[indexPath.row]
+      cell.infoName.text = item["name"]
+      cell.infoValue.text = item["value"]
       return cell
     }
     return UITableViewCell()

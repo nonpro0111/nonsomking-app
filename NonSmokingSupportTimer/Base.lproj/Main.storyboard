@@ -164,8 +164,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sF8-jG-GDL">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="500"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="AbT-lr-iJC"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SmokingInfoItem" rowHeight="100" id="KKv-AR-5b6" customClass="SmokingInfoItemTableViewCell" customModule="NonSmokingSupportTimer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
@@ -174,7 +177,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="禁煙情報" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gr7-qQ-mhG">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gr7-qQ-mhG">
                                                     <rect key="frame" x="20" y="20" width="80" height="59"/>
                                                     <color key="backgroundColor" red="0.98800442202681849" green="0.99257433893210656" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -185,12 +188,12 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="データ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xs-BX-6Kd">
-                                                    <rect key="frame" x="140" y="20" width="80" height="59"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xs-BX-6Kd">
+                                                    <rect key="frame" x="140" y="20" width="200" height="59"/>
                                                     <color key="backgroundColor" red="0.98800442202681849" green="0.99257433893210656" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="59" id="Rr7-Vy-Eta"/>
-                                                        <constraint firstAttribute="width" constant="80" id="qiT-fa-C4E"/>
+                                                        <constraint firstAttribute="width" constant="200" id="qiT-fa-C4E"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -222,7 +225,6 @@
                         <constraints>
                             <constraint firstItem="sF8-jG-GDL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="9tZ-YW-EMf"/>
                             <constraint firstAttribute="trailing" secondItem="sF8-jG-GDL" secondAttribute="trailing" id="sj9-FF-8IG"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sF8-jG-GDL" secondAttribute="bottom" id="tXV-gV-W6Y"/>
                             <constraint firstItem="sF8-jG-GDL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vzz-rv-EP1"/>
                         </constraints>
                     </view>

@@ -14,6 +14,7 @@
 		E06CDB8E1F370E4C00FA6B5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E06CDB8D1F370E4C00FA6B5A /* Assets.xcassets */; };
 		E06CDB911F370E4C00FA6B5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E06CDB8F1F370E4C00FA6B5A /* LaunchScreen.storyboard */; };
 		E0B296741F408C24005A462F /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B296731F408C24005A462F /* settingViewController.swift */; };
+		E0F032661F89FBAE000F4B9F /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F032651F89FBAE000F4B9F /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		E06CDB921F370E4C00FA6B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E06CDB991F370E6B00FA6B5A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E0B296731F408C24005A462F /* settingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = settingViewController.swift; path = ../settingViewController.swift; sourceTree = "<group>"; };
+		E0F032651F89FBAE000F4B9F /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		E06CDB851F370E4C00FA6B5A /* NonSmokingSupportTimer */ = {
 			isa = PBXGroup;
 			children = (
+				E0F032651F89FBAE000F4B9F /* UserData.swift */,
 				E0B296731F408C24005A462F /* settingViewController.swift */,
 				E06CDB861F370E4C00FA6B5A /* AppDelegate.swift */,
 				E06CDB881F370E4C00FA6B5A /* SmokingInfoViewController.swift */,
@@ -145,6 +148,7 @@
 				E06CDB891F370E4C00FA6B5A /* SmokingInfoViewController.swift in Sources */,
 				E0507DAC1F37239B0082062C /* SmokingInfoItemTableViewCell.swift in Sources */,
 				E06CDB871F370E4C00FA6B5A /* AppDelegate.swift in Sources */,
+				E0F032661F89FBAE000F4B9F /* UserData.swift in Sources */,
 				E0B296741F408C24005A462F /* settingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
