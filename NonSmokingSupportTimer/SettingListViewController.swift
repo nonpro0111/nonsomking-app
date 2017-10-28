@@ -16,6 +16,7 @@ class SettingListViewController: UIViewController, UITableViewDelegate, UITableV
     self.present(smokingInfo, animated: true, completion: nil)
   }
   let items = ["喫煙データ変更", "禁煙再スタート", "リセット"]
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -30,6 +31,28 @@ class SettingListViewController: UIViewController, UITableViewDelegate, UITableV
   // MARK: - UITableViewDelegate
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 40
+  }
+
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    if indexPath.section == 0 {
+      switch indexPath.row {
+      case 0: // 設定変更
+        let settingView = storyboard!.instantiateViewController(withIdentifier: "settingView")
+        self.present(settingView, animated: true, completion: nil)
+      case 1: // 再スタート
+        let now = Date()
+        UserDefaults.standard.set(now, forKey: "startAt")
+        let smokingInfo = storyboard!.instantiateViewController(withIdentifier: "smokingInfoView")
+        self.present(smokingInfo, animated: true, completion: nil)
+      case 2: // リセット
+        let appIdentifier:String = Bundle.main.bundleIdentifier!
+        UserDefaults.standard.removePersistentDomain(forName: appIdentifier)
+        let settingView = storyboard!.instantiateViewController(withIdentifier: "settingView")
+        self.present(settingView, animated: true, completion: nil)
+      default:
+        print("エラー")
+      }
+    }
   }
 
   // MARK: - UITableViewDataSource

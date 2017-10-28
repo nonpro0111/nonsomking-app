@@ -21,10 +21,8 @@ class settingViewController: UIViewController {
     priceLabel.text = "\(value)"
 
   }
-
   @IBOutlet weak var smokingNumStepper: UIStepper!
   @IBOutlet weak var priceStepper: UIStepper!
-
   @IBOutlet weak var setUpButton: UIButton!
   @IBAction func setUp(_ sender: Any) {
     let price = Int(priceStepper.value)
@@ -33,6 +31,8 @@ class settingViewController: UIViewController {
     let smokingInfoView = storyboard!.instantiateViewController(withIdentifier: "smokingInfoView")
     self.present(smokingInfoView, animated: true, completion: nil)
   }
+
+  var isSetStartAt = true
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -47,13 +47,16 @@ class settingViewController: UIViewController {
 
   func setSmokingInfo(num: Int, price: Int){
     let userDefaults = UserDefaults.standard
-    let now = Date()
-    print(now)
-
     userDefaults.set(num, forKey: "smokingNum")
     userDefaults.set(price, forKey: "price")
-    userDefaults.set(now, forKey: "startAt")
-    userDefaults.set(true, forKey: "hasSettings")
+
+    // 設定済みでデータ変更の場合は、禁煙開始時間は更新しない。
+    if (!userDefaults.bool(forKey: "hasSettings")) {
+      print("未設定")
+      let now = Date()
+      userDefaults.set(now, forKey: "startAt")
+      userDefaults.set(true, forKey: "hasSettings")
+    }
   }
     
 

@@ -17,13 +17,16 @@ class SmokingInfoViewController: UIViewController, UITableViewDelegate, UITableV
     self.present(settingList, animated: true, completion: nil)
   }
 
-  static var userData = UserData()
-  static let items = userData.tableViewData()
+  var userData = UserData()
+  var items: Array<Dictionary<String, String>> = []
 
   override func viewDidLoad() {
+    super.viewDidLoad()
+    userData = UserData()
+    items = userData.tableViewData()
     let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateCellInfoValue(timer:)), userInfo: nil, repeats: true)
     timer.fire()
-    super.viewDidLoad()
+
 
     // Do any additional setup after loading the view, typically from a nib.
   }
@@ -34,8 +37,8 @@ class SmokingInfoViewController: UIViewController, UITableViewDelegate, UITableV
   }
 
   func updateCellInfoValue(timer: Timer) {
-    SmokingInfoViewController.userData.nonSmokingSec += 1
-    let items = SmokingInfoViewController.userData.tableViewData()
+    userData.nonSmokingSec += 1
+    let items = userData.tableViewData()
 
     let allCells = tableView.visibleCells as! [SmokingInfoItemTableViewCell]
     for (i, cell) in allCells.enumerated() {
@@ -63,7 +66,7 @@ class SmokingInfoViewController: UIViewController, UITableViewDelegate, UITableV
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     if indexPath.section == 0 {
       let cell = tableView.dequeueReusableCell(withIdentifier: "SmokingInfoItem") as! SmokingInfoItemTableViewCell
-      let item = SmokingInfoViewController.items[indexPath.row]
+      let item = items[indexPath.row]
       cell.infoName.text = item["name"]
       cell.infoValue.text = item["value"]
       return cell
