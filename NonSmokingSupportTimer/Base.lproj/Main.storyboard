@@ -259,7 +259,7 @@
         <!--Setting List View Controller-->
         <scene sceneID="WBe-5w-xOI">
             <objects>
-                <viewController storyboardIdentifier="settingList" id="cjM-89-Fjs" customClass="SettingListViewController" customModule="NonSmokingSupportTimer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settingListView" id="cjM-89-Fjs" customClass="SettingListViewController" customModule="NonSmokingSupportTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SN6-Es-gIo"/>
                         <viewControllerLayoutGuide type="bottom" id="vYy-Sy-xem"/>
@@ -272,7 +272,11 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="設定" id="Jcj-He-HlI">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="IGP-KA-7HF"/>
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="IGP-KA-7HF">
+                                            <connections>
+                                                <action selector="backSmokingInfo:" destination="cjM-89-Fjs" id="Ifv-fY-6g8"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>

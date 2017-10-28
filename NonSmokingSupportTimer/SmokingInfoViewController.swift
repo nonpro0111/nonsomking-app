@@ -13,7 +13,7 @@ class SmokingInfoViewController: UIViewController, UITableViewDelegate, UITableV
   @IBOutlet weak var tableView: UITableView!
 
   @IBAction func goSettingList(_ sender: UIBarButtonItem) {
-    let settingList = storyboard!.instantiateViewController(withIdentifier: "settingList")
+    let settingList = storyboard!.instantiateViewController(withIdentifier: "settingListView")
     self.present(settingList, animated: true, completion: nil)
   }
 

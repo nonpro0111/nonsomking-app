@@ -11,6 +11,10 @@ import UIKit
 class SettingListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   @IBOutlet weak var tableView: UITableView!
+  @IBAction func backSmokingInfo(_ sender: UIBarButtonItem) {
+    let smokingInfo = storyboard!.instantiateViewController(withIdentifier: "smokingInfoView")
+    self.present(smokingInfo, animated: true, completion: nil)
+  }
   let items = ["喫煙データ変更", "禁煙再スタート", "リセット"]
   override func viewDidLoad() {
     super.viewDidLoad()
