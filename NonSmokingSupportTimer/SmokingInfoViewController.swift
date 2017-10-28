@@ -11,6 +11,12 @@ import UIKit
 class SmokingInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   @IBOutlet weak var tableView: UITableView!
+
+  @IBAction func goSettingList(_ sender: UIBarButtonItem) {
+    let settingList = storyboard!.instantiateViewController(withIdentifier: "settingList")
+    self.present(settingList, animated: true, completion: nil)
+  }
+
   static var userData = UserData()
   static let items = userData.tableViewData()
 

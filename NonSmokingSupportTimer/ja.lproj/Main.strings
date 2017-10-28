@@ -1,0 +1,27 @@
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "CsB-rG-Mlv"; */
+"CsB-rG-Mlv.title" = "Title";
+
+/* Class = "UILabel"; text = "20"; ObjectID = "DtZ-sc-0gq"; */
+"DtZ-sc-0gq.text" = "20";
+
+/* Class = "UILabel"; text = "円"; ObjectID = "EFo-UK-Txg"; */
+"EFo-UK-Txg.text" = "円";
+
+/* Class = "UILabel"; text = "1箱の値段は？"; ObjectID = "I9S-w9-6eD"; */
+"I9S-w9-6eD.text" = "1箱の値段は？";
+
+/* Class = "UILabel"; text = "1日に吸う本数は？"; ObjectID = "cNy-yI-LJv"; */
+"cNy-yI-LJv.text" = "1日に吸う本数は？";
+
+/* Class = "UILabel"; text = "440"; ObjectID = "cib-Gp-YcG"; */
+"cib-Gp-YcG.text" = "440";
+
+/* Class = "UILabel"; text = "あなたの喫煙データを入力してください"; ObjectID = "gu9-OG-QAo"; */
+"gu9-OG-QAo.text" = "あなたの喫煙データを入力してください";
+
+/* Class = "UIButton"; normalTitle = "設定"; ObjectID = "p3b-Iz-22Q"; */
+"p3b-Iz-22Q.normalTitle" = "設定";
+
+/* Class = "UILabel"; text = "本"; ObjectID = "z9d-ar-vYp"; */
+"z9d-ar-vYp.text" = "本";
