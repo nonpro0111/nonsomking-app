@@ -17,7 +17,7 @@ class SmokingInfoViewController: UIViewController, UITableViewDelegate, UITableV
     self.present(settingList, animated: true, completion: nil)
   }
 
-  var userData = UserData()
+  var userData: UserData!
   var items: Array<Dictionary<String, String>> = []
 
   override func viewDidLoad() {
