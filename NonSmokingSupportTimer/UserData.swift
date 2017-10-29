@@ -28,9 +28,10 @@ struct UserData {
     } else {
       reason = ""
     }
+
+    nonSmokingAt = userDefaults.object(forKey: "startAt") as! Date
     num = userDefaults.integer(forKey: "smokingNum")
     price = userDefaults.integer(forKey: "price")
-    nonSmokingAt = userDefaults.object(forKey: "startAt") as! Date
     numPerSec = Double(num) / Double(24 * 60 * 60)
     nonSmokingSec = Int(Date().timeIntervalSince(nonSmokingAt))
   }

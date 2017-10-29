@@ -31,9 +31,10 @@ class settingViewController: UIViewController, UITextFieldDelegate {
     let price = Int(priceStepper.value)
     let smokingNum = Int(smokingNumStepper.value)
 
-    setSmokingInfo(num: smokingNum, price: price, reason: reason)
-    let smokingInfoView = storyboard!.instantiateViewController(withIdentifier: "smokingInfoView")
-    self.present(smokingInfoView, animated: true, completion: nil)
+    if setSmokingInfo(num: smokingNum, price: price, reason: reason) {
+      let smokingInfoView = storyboard!.instantiateViewController(withIdentifier: "smokingInfoView")
+      self.present(smokingInfoView, animated: true, completion: nil)
+    }
   }
 
   var isSetStartAt = true
@@ -50,7 +51,7 @@ class settingViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
   }
 
-  func setSmokingInfo(num: Int, price: Int, reason: String?){
+  func setSmokingInfo(num: Int, price: Int, reason: String?) -> Bool {
     let userDefaults = UserDefaults.standard
     userDefaults.set(num, forKey: "smokingNum")
     userDefaults.set(price, forKey: "price")
@@ -62,6 +63,7 @@ class settingViewController: UIViewController, UITextFieldDelegate {
       userDefaults.set(now, forKey: "startAt")
       userDefaults.set(true, forKey: "hasSettings")
     }
+    return userDefaults.synchronize()
   }
 
   // MARK: - UITextFieldDelegate

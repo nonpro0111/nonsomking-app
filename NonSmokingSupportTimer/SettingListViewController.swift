@@ -42,13 +42,17 @@ class SettingListViewController: UIViewController, UITableViewDelegate, UITableV
       case 1: // 再スタート
         let now = Date()
         UserDefaults.standard.set(now, forKey: "startAt")
-        let smokingInfo = storyboard!.instantiateViewController(withIdentifier: "smokingInfoView")
-        self.present(smokingInfo, animated: true, completion: nil)
+        if UserDefaults.standard.synchronize() {
+          let smokingInfo = storyboard!.instantiateViewController(withIdentifier: "smokingInfoView")
+          self.present(smokingInfo, animated: true, completion: nil)
+        }
       case 2: // リセット
         let appIdentifier:String = Bundle.main.bundleIdentifier!
         UserDefaults.standard.removePersistentDomain(forName: appIdentifier)
-        let settingView = storyboard!.instantiateViewController(withIdentifier: "settingView")
-        self.present(settingView, animated: true, completion: nil)
+        if UserDefaults.standard.synchronize() {
+          let settingView = storyboard!.instantiateViewController(withIdentifier: "settingView")
+          self.present(settingView, animated: true, completion: nil)
+        }
       default:
         print("エラー")
       }
