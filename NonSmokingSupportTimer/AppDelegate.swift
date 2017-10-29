@@ -16,10 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     let userDefaults = UserDefaults.standard
-    if (!userDefaults.bool(forKey: "hasSettings")) {
+    if (userDefaults.bool(forKey: "hasSettings")) {
       self.window = UIWindow(frame: UIScreen.main.bounds)
       let storyboard = UIStoryboard(name: "Main", bundle: nil)
-      let initialViewController = storyboard.instantiateViewController(withIdentifier: "settingView")
+      let initialViewController = storyboard.instantiateViewController(withIdentifier: "smokingInfoView")
       self.window?.rootViewController = initialViewController
       self.window?.makeKeyAndVisible()
     }

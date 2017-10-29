@@ -13,6 +13,7 @@ let hourSec = 60 * 60
 let minSec = 60
 
 struct UserData {
+  let reason: String
   let price: Int
   let num: Int
   let nonSmokingAt: Date
@@ -22,6 +23,11 @@ struct UserData {
 
 
   init() {
+    if (userDefaults.string(forKey: "reason") != nil) {
+      reason = userDefaults.string(forKey: "reason")!
+    } else {
+      reason = ""
+    }
     num = userDefaults.integer(forKey: "smokingNum")
     price = userDefaults.integer(forKey: "price")
     nonSmokingAt = userDefaults.object(forKey: "startAt") as! Date

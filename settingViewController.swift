@@ -8,7 +8,7 @@
 
 import UIKit
 
-class settingViewController: UIViewController {
+class settingViewController: UIViewController, UITextFieldDelegate {
 
   @IBOutlet weak var smokingNumLabel: UILabel!
   @IBAction func smokingNumStepperTapped(_ sender: UIStepper) {
@@ -24,10 +24,14 @@ class settingViewController: UIViewController {
   @IBOutlet weak var smokingNumStepper: UIStepper!
   @IBOutlet weak var priceStepper: UIStepper!
   @IBOutlet weak var setUpButton: UIButton!
+  @IBOutlet weak var reasonTextField: UITextField!
+  
   @IBAction func setUp(_ sender: Any) {
+    let reason = reasonTextField.text
     let price = Int(priceStepper.value)
     let smokingNum = Int(smokingNumStepper.value)
-    setSmokingInfo(num: smokingNum, price: price)
+
+    setSmokingInfo(num: smokingNum, price: price, reason: reason)
     let smokingInfoView = storyboard!.instantiateViewController(withIdentifier: "smokingInfoView")
     self.present(smokingInfoView, animated: true, completion: nil)
   }
@@ -36,7 +40,8 @@ class settingViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
+    reasonTextField.returnKeyType = UIReturnKeyType.done
+    reasonTextField.delegate = self
         // Do any additional setup after loading the view.
   }
 
@@ -45,18 +50,24 @@ class settingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
   }
 
-  func setSmokingInfo(num: Int, price: Int){
+  func setSmokingInfo(num: Int, price: Int, reason: String?){
     let userDefaults = UserDefaults.standard
     userDefaults.set(num, forKey: "smokingNum")
     userDefaults.set(price, forKey: "price")
+    userDefaults.set(reason, forKey: "reason")
 
     // 設定済みでデータ変更の場合は、禁煙開始時間は更新しない。
     if (!userDefaults.bool(forKey: "hasSettings")) {
-      print("未設定")
       let now = Date()
       userDefaults.set(now, forKey: "startAt")
       userDefaults.set(true, forKey: "hasSettings")
     }
+  }
+
+  // MARK: - UITextFieldDelegate
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    reasonTextField.resignFirstResponder()
+    return true
   }
     
 
