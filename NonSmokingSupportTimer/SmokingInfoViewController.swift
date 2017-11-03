@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FontAwesome_swift
 
 class SmokingInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -67,7 +68,9 @@ class SmokingInfoViewController: UIViewController, UITableViewDelegate, UITableV
     if indexPath.section == 0 {
       let cell = tableView.dequeueReusableCell(withIdentifier: "SmokingInfoItem") as! SmokingInfoItemTableViewCell
       let item = items[indexPath.row]
-      cell.infoName.text = item["name"]
+
+      cell.infoName.font = UIFont.fontAwesome(ofSize: 20)
+      cell.infoName.text = String.fontAwesomeIcon(code: item["icon"]!)
       cell.infoValue.text = item["value"]
       return cell
     }
