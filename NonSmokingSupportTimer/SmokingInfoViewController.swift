@@ -11,6 +11,7 @@ import FontAwesome_swift
 
 class SmokingInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+  @IBOutlet weak var reasonLabel: UILabel!
   @IBOutlet weak var tableView: UITableView!
 
   @IBAction func goSettingList(_ sender: UIBarButtonItem) {
@@ -24,6 +25,8 @@ class SmokingInfoViewController: UIViewController, UITableViewDelegate, UITableV
   override func viewDidLoad() {
     super.viewDidLoad()
     userData = UserData()
+
+    reasonLabel.text = userData.reason.isEmpty ? "未記入" : userData.reason
     items = userData.tableViewData()
     let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateCellInfoValue(timer:)), userInfo: nil, repeats: true)
     timer.fire()
