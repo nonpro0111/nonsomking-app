@@ -16,6 +16,7 @@
 		E08D19B01FA44C7A0093CA84 /* SettingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08D19AF1FA44C7A0093CA84 /* SettingListViewController.swift */; };
 		E08D19B21FA44DC60093CA84 /* SettingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08D19B11FA44DC60093CA84 /* SettingListTableViewCell.swift */; };
 		E0B296741F408C24005A462F /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B296731F408C24005A462F /* settingViewController.swift */; };
+		E0EA52071FAC419200610D40 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA52061FAC419200610D40 /* IntExtension.swift */; };
 		E0F032661F89FBAE000F4B9F /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F032651F89FBAE000F4B9F /* UserData.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		E08D19B11FA44DC60093CA84 /* SettingListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingListTableViewCell.swift; sourceTree = "<group>"; };
 		E0B296731F408C24005A462F /* settingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = settingViewController.swift; path = ../settingViewController.swift; sourceTree = "<group>"; };
 		E0E635831F9F926E0063C57D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		E0EA52061FAC419200610D40 /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntExtension.swift; path = ../IntExtension.swift; sourceTree = "<group>"; };
 		E0F032651F89FBAE000F4B9F /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +68,7 @@
 		E06CDB851F370E4C00FA6B5A /* NonSmokingSupportTimer */ = {
 			isa = PBXGroup;
 			children = (
+				E0EA52061FAC419200610D40 /* IntExtension.swift */,
 				E0F032651F89FBAE000F4B9F /* UserData.swift */,
 				E0B296731F408C24005A462F /* settingViewController.swift */,
 				E06CDB861F370E4C00FA6B5A /* AppDelegate.swift */,
@@ -158,6 +161,7 @@
 				E0507DAC1F37239B0082062C /* SmokingInfoItemTableViewCell.swift in Sources */,
 				E06CDB871F370E4C00FA6B5A /* AppDelegate.swift in Sources */,
 				E0F032661F89FBAE000F4B9F /* UserData.swift in Sources */,
+				E0EA52071FAC419200610D40 /* IntExtension.swift in Sources */,
 				E0B296741F408C24005A462F /* settingViewController.swift in Sources */,
 				E08D19B21FA44DC60093CA84 /* SettingListTableViewCell.swift in Sources */,
 			);

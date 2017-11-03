@@ -54,14 +54,11 @@ struct UserData {
   }
 
   func tableViewData() -> Array<Dictionary<String, String>>{
-    let data = [
-      ["name": "価格", "value": String(self.price)],
-      ["name": "本数", "value": String(self.num)],
+    return [
       ["name": "日時", "value": self.nonSmokingTime],
-      ["name": "禁煙本数", "value": String(self.nonSmokingNum)],
-      ["name": "禁煙金額", "value": String(self.nonSmokingPrice)]
+      ["name": "禁煙本数", "value": String(self.nonSmokingNum) + "本"],
+      ["name": "禁煙金額", "value": self.nonSmokingPrice.currencyFormatStr + "円"]
     ]
-    return data
   }
   
 }

@@ -195,10 +195,10 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sF8-jG-GDL">
-                                <rect key="frame" x="0.0" y="64" width="375" height="500"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="500" id="AbT-lr-iJC"/>
+                                    <constraint firstAttribute="height" constant="180" id="AbT-lr-iJC"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SmokingInfoItem" rowHeight="100" id="KKv-AR-5b6" customClass="SmokingInfoItemTableViewCell" customModule="NonSmokingSupportTimer" customModuleProvider="target">

@@ -49,7 +49,7 @@ class SmokingInfoViewController: UIViewController, UITableViewDelegate, UITableV
   // MARK: - UITableViewDelegate
   // セルの高さ
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 100
+    return 60
   }
 
   // MARK: - UITableViewDataSource
@@ -57,7 +57,7 @@ class SmokingInfoViewController: UIViewController, UITableViewDelegate, UITableV
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if section == 0 {
       // セル数
-      return 6
+      return 3
     }
     return 0
   }
