@@ -37,18 +37,27 @@ class settingViewController: UIViewController, UITextFieldDelegate {
     }
   }
 
-  var isSetStartAt = true
+  var hasSettings: Bool!
 
   override func viewDidLoad() {
     super.viewDidLoad()
     reasonTextField.returnKeyType = UIReturnKeyType.done
     reasonTextField.delegate = self
-        // Do any additional setup after loading the view.
+
+    hasSettings = UserDefaults.standard.bool(forKey: "hasSettings")
+    setDefaultValues(hasSetting: hasSettings)
   }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+  }
+
+
+  // MARK: - UITextFieldDelegate
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    reasonTextField.resignFirstResponder()
+    return true
   }
 
   func setSmokingInfo(num: Int, price: Int, reason: String?) -> Bool {
@@ -58,7 +67,7 @@ class settingViewController: UIViewController, UITextFieldDelegate {
     userDefaults.set(reason, forKey: "reason")
 
     // 設定済みでデータ変更の場合は、禁煙開始時間は更新しない。
-    if (!userDefaults.bool(forKey: "hasSettings")) {
+    if (!hasSettings) {
       let now = Date()
       userDefaults.set(now, forKey: "startAt")
       userDefaults.set(true, forKey: "hasSettings")
@@ -66,21 +75,19 @@ class settingViewController: UIViewController, UITextFieldDelegate {
     return userDefaults.synchronize()
   }
 
-  // MARK: - UITextFieldDelegate
-  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    reasonTextField.resignFirstResponder()
-    return true
-  }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+  func setDefaultValues(hasSetting: Bool) {
+    var num = 20, price = 440, reason = ""
+    if (hasSettings) {
+      let userData = UserData()
+      num = userData.num
+      price = userData.price
+      reason = userData.reason
     }
-    */
+    smokingNumLabel.text = "\(num)"
+    smokingNumStepper.value = Double(num)
+    priceLabel.text = "\(price)"
+    priceStepper.value = Double(price)
+    reasonTextField.text = reason
+  }
 
 }
