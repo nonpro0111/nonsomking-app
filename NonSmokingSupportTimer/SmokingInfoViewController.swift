@@ -24,6 +24,7 @@ class SmokingInfoViewController: UIViewController, UITableViewDelegate, UITableV
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLineEtched
     userData = UserData()
 
     reasonLabel.text = userData.reason.isEmpty ? "未記入" : userData.reason
