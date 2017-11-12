@@ -16,6 +16,10 @@ class LocalNotificationManager: NSObject {
   }
 
   static func scheduleNotification(alertBody: String, fireDate: Date) {
+    if (Date() >= fireDate) {
+      return
+    }
+
     let notification = UILocalNotification()
     notification.alertBody = alertBody
     notification.fireDate = fireDate
