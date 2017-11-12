@@ -49,8 +49,7 @@ class settingViewController: UIViewController, UITextFieldDelegate {
   }
 
   override func viewDidAppear(_ animated: Bool) {
-    let notificationSetting = UIUserNotificationSettings(types: [.alert, .sound], categories: nil)
-    UIApplication.shared.registerUserNotificationSettings(notificationSetting)
+    LocalNotificationManager.registNotificationSetting()
   }
 
   override func didReceiveMemoryWarning() {

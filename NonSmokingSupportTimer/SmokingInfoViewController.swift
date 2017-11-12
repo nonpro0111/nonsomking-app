@@ -32,7 +32,6 @@ class SmokingInfoViewController: UIViewController, UITableViewDelegate, UITableV
     let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateCellInfoValue(timer:)), userInfo: nil, repeats: true)
     timer.fire()
 
-
     // Do any additional setup after loading the view, typically from a nib.
   }
 
