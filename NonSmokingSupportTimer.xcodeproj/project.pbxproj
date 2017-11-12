@@ -143,6 +143,7 @@
 				TargetAttributes = {
 					E06CDB821F370E4C00FA6B5A = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = Y9ZKTVKU78;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -366,6 +367,7 @@
 			baseConfigurationReference = 926DE47021B5B71148E5A286 /* Pods-NonSmokingSupportTimer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y9ZKTVKU78;
 				INFOPLIST_FILE = NonSmokingSupportTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nomuyoshi.NonSmokingSupportTimer;
@@ -379,6 +381,7 @@
 			baseConfigurationReference = DDC17AE6180334084F99FDCF /* Pods-NonSmokingSupportTimer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y9ZKTVKU78;
 				INFOPLIST_FILE = NonSmokingSupportTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nomuyoshi.NonSmokingSupportTimer;

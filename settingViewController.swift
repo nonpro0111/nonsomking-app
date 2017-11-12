@@ -41,9 +41,9 @@ class settingViewController: UIViewController, UITextFieldDelegate {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    reasonTextField.returnKeyType = UIReturnKeyType.done
-    reasonTextField.delegate = self
 
+    setUpButtonStyle()
+    setReasonTextField()
     hasSettings = UserDefaults.standard.bool(forKey: "hasSettings")
     setDefaultValues(hasSetting: hasSettings)
   }
@@ -60,19 +60,9 @@ class settingViewController: UIViewController, UITextFieldDelegate {
     return true
   }
 
-  func setSmokingInfo(num: Int, price: Int, reason: String?) -> Bool {
-    let userDefaults = UserDefaults.standard
-    userDefaults.set(num, forKey: "smokingNum")
-    userDefaults.set(price, forKey: "price")
-    userDefaults.set(reason, forKey: "reason")
-
-    // 設定済みでデータ変更の場合は、禁煙開始時間は更新しない。
-    if (!hasSettings) {
-      let now = Date()
-      userDefaults.set(now, forKey: "startAt")
-      userDefaults.set(true, forKey: "hasSettings")
-    }
-    return userDefaults.synchronize()
+  func setReasonTextField() {
+    reasonTextField.returnKeyType = UIReturnKeyType.done
+    reasonTextField.delegate = self
   }
 
   func setDefaultValues(hasSetting: Bool) {
@@ -90,4 +80,25 @@ class settingViewController: UIViewController, UITextFieldDelegate {
     reasonTextField.text = reason
   }
 
+  func setUpButtonStyle() {
+    setUpButton.setTitle("禁煙スタート", for: UIControlState.normal)
+    setUpButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+    setUpButton.backgroundColor = UIColor(red: 43/255, green: 145/255, blue: 254/255, alpha: 1)
+    setUpButton.layer.cornerRadius = 2
+  }
+
+  func setSmokingInfo(num: Int, price: Int, reason: String?) -> Bool {
+    let userDefaults = UserDefaults.standard
+    userDefaults.set(num, forKey: "smokingNum")
+    userDefaults.set(price, forKey: "price")
+    userDefaults.set(reason, forKey: "reason")
+
+    // 設定済みでデータ変更の場合は、禁煙開始時間は更新しない。
+    if (!hasSettings) {
+      let now = Date()
+      userDefaults.set(now, forKey: "startAt")
+      userDefaults.set(true, forKey: "hasSettings")
+    }
+    return userDefaults.synchronize()
+  }
 }
