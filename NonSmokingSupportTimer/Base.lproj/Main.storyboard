@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YKI-2y-AuB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1mi-UP-wkj">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,54 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Tutorial View Controller-->
+        <scene sceneID="Vr5-mw-Zsu">
+            <objects>
+                <viewController id="1mi-UP-wkj" customClass="TutorialViewController" customModule="NonSmokingSupportTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VKK-dV-Z58"/>
+                        <viewControllerLayoutGuide type="bottom" id="88k-Bm-lR1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tic-pE-eh1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial-image" translatesAutoresizingMaskIntoConstraints="NO" id="Qrl-1e-ZKR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvO-ET-Nnf">
+                                <rect key="frame" x="66" y="597" width="243" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uoh-Wn-4PX"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goSetting:" destination="1mi-UP-wkj" eventType="touchUpInside" id="rV2-lk-aWk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jvO-ET-Nnf" firstAttribute="leading" secondItem="Tic-pE-eh1" secondAttribute="leadingMargin" constant="50" id="81v-YL-igb"/>
+                            <constraint firstItem="jvO-ET-Nnf" firstAttribute="centerX" secondItem="Tic-pE-eh1" secondAttribute="centerX" id="9PR-C8-TnP"/>
+                            <constraint firstItem="Qrl-1e-ZKR" firstAttribute="top" secondItem="Tic-pE-eh1" secondAttribute="top" id="aHD-6x-u0R"/>
+                            <constraint firstItem="Qrl-1e-ZKR" firstAttribute="leading" secondItem="Tic-pE-eh1" secondAttribute="leading" id="cJg-dw-waD"/>
+                            <constraint firstItem="88k-Bm-lR1" firstAttribute="top" secondItem="jvO-ET-Nnf" secondAttribute="bottom" constant="20" id="crR-jS-vMu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jvO-ET-Nnf" secondAttribute="trailing" constant="50" id="frU-b4-12j"/>
+                            <constraint firstItem="88k-Bm-lR1" firstAttribute="top" secondItem="Qrl-1e-ZKR" secondAttribute="bottom" id="tdm-z0-3ef"/>
+                            <constraint firstAttribute="trailing" secondItem="Qrl-1e-ZKR" secondAttribute="trailing" id="yOI-dP-Vte"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="goSettingButton" destination="jvO-ET-Nnf" id="28B-qk-ZhV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S44-Mj-7BT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1413.5999999999999" y="-28.335832083958024"/>
+        </scene>
         <!--Setting View Controller-->
         <scene sceneID="iN8-bp-8zO">
             <objects>
@@ -37,7 +85,7 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjk-yK-av4" userLabel="ReasonTextFieldView">
-                                <rect key="frame" x="0.0" y="115" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="125" width="375" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="禁煙理由・目的" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVT-pW-cw2">
                                         <rect key="frame" x="20" y="4" width="125" height="21"/>
@@ -67,7 +115,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6p4-1q-RUM" userLabel="SmokingNumView">
-                                <rect key="frame" x="0.0" y="205" width="375" height="110"/>
+                                <rect key="frame" x="0.0" y="215" width="375" height="110"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DtZ-sc-0gq">
                                         <rect key="frame" x="80" y="26.5" width="60" height="57.5"/>
@@ -114,7 +162,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3r5-xL-3To" userLabel="PriceView">
-                                <rect key="frame" x="0.0" y="325" width="375" height="110"/>
+                                <rect key="frame" x="0.0" y="335" width="375" height="110"/>
                                 <subviews>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="440" maximumValue="990" stepValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="ydO-Ah-ppe">
                                         <rect key="frame" x="231" y="40.5" width="94" height="29"/>
@@ -161,18 +209,18 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3b-Iz-22Q">
-                                <rect key="frame" x="112" y="451" width="150" height="50"/>
+                                <rect key="frame" x="112" y="461" width="150" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="7Ca-QM-8jh"/>
                                     <constraint firstAttribute="height" constant="50" id="Qq8-QB-1WU"/>
                                 </constraints>
-                                <state key="normal" title="禁煙スタート"/>
+                                <state key="normal" title="設定"/>
                                 <connections>
                                     <action selector="setUp:" destination="YKI-2y-AuB" eventType="touchUpInside" id="QWG-ly-aY6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの喫煙データを入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gu9-OG-QAo">
-                                <rect key="frame" x="18" y="74" width="312" height="21"/>
+                                <rect key="frame" x="18" y="84" width="312" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -196,7 +244,7 @@
                             <constraint firstAttribute="trailing" secondItem="3r5-xL-3To" secondAttribute="trailing" id="nJp-7t-SBp"/>
                             <constraint firstItem="3r5-xL-3To" firstAttribute="leading" secondItem="FBL-gD-yFT" secondAttribute="leading" id="peM-yM-j15"/>
                             <constraint firstItem="fjk-yK-av4" firstAttribute="leading" secondItem="FBL-gD-yFT" secondAttribute="leading" id="uZW-G8-BeC"/>
-                            <constraint firstItem="gu9-OG-QAo" firstAttribute="top" secondItem="68g-0E-c3o" secondAttribute="bottom" constant="10" id="yza-af-j9z"/>
+                            <constraint firstItem="gu9-OG-QAo" firstAttribute="top" secondItem="68g-0E-c3o" secondAttribute="bottom" constant="20" id="yza-af-j9z"/>
                         </constraints>
                     </view>
                     <connections>
@@ -421,7 +469,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7Z-CY-oBj">
-                                <rect key="frame" x="20" y="459" width="335" height="208"/>
+                                <rect key="frame" x="20" y="459" width="352" height="208"/>
                                 <color key="backgroundColor" red="0.91764705882352937" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -438,7 +486,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="c7Z-CY-oBj" secondAttribute="bottom" id="WZ6-Cl-a6a"/>
                             <constraint firstItem="Go2-sQ-czU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bpw-zJ-qF0"/>
                             <constraint firstItem="aZQ-lF-I3A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cf4-By-squ"/>
-                            <constraint firstAttribute="trailing" secondItem="c7Z-CY-oBj" secondAttribute="trailing" constant="20" id="hjq-Ol-dyg"/>
+                            <constraint firstAttribute="trailing" secondItem="c7Z-CY-oBj" secondAttribute="trailing" constant="3" id="hjq-Ol-dyg"/>
                             <constraint firstItem="fnQ-6c-VBI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="i4q-HG-hid"/>
                             <constraint firstItem="Go2-sQ-czU" firstAttribute="top" secondItem="fnQ-6c-VBI" secondAttribute="bottom" constant="10" id="iTu-bh-CGD"/>
                             <constraint firstAttribute="trailing" secondItem="aZQ-lF-I3A" secondAttribute="trailing" id="rL7-tP-DQQ"/>
@@ -554,4 +602,7 @@
             <point key="canvasLocation" x="768.79999999999995" y="-26.53673163418291"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tutorial-image" width="320" height="568"/>
+    </resources>
 </document>

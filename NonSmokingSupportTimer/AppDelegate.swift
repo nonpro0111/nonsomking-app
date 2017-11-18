@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     let userDefaults = UserDefaults.standard
     if (userDefaults.bool(forKey: "hasSettings")) {
+      let date2 = Date(timeInterval: -295200, since: Date())
+
+      userDefaults.set(date2, forKey: "startAt")
       self.window = UIWindow(frame: UIScreen.main.bounds)
       let storyboard = UIStoryboard(name: "Main", bundle: nil)
       let initialViewController = storyboard.instantiateViewController(withIdentifier: "smokingInfoView")

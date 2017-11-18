@@ -85,7 +85,7 @@ class settingViewController: UIViewController, UITextFieldDelegate {
   }
 
   func setUpButtonStyle() {
-    setUpButton.setTitle("禁煙スタート", for: UIControlState.normal)
+    setUpButton.setTitle("設定完了", for: UIControlState.normal)
     setUpButton.setTitleColor(UIColor.white, for: UIControlState.normal)
     setUpButton.backgroundColor = UIColor(red: 43/255, green: 145/255, blue: 254/255, alpha: 1)
     setUpButton.layer.cornerRadius = 2
