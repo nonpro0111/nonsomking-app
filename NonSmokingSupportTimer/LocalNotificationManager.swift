@@ -12,20 +12,14 @@ import UserNotifications
 
 class LocalNotificationManager: NSObject {
   static func registNotificationSetting(){
-    if #available(iOS 10.0, *) {
-      let center = UNUserNotificationCenter.current()
-      center.requestAuthorization(options: [.alert, .sound], completionHandler: {(granted, _) in
-        if granted {
-          debugPrint("許可")
-        } else {
-          debugPrint("拒否")
-        }
-      })
-    } else {
-      let setting = UIUserNotificationSettings(types: [.alert, .sound], categories: nil)
-      UIApplication.shared.registerUserNotificationSettings(setting)
-    }
-
+    let center = UNUserNotificationCenter.current()
+    center.requestAuthorization(options: [.alert, .sound], completionHandler: {(granted, _) in
+      if granted {
+        debugPrint("許可")
+      } else {
+        debugPrint("拒否")
+      }
+    })
   }
 
   static func scheduleNotification(title: String, alertBody: String, interval: Double) {
@@ -34,7 +28,13 @@ class LocalNotificationManager: NSObject {
     content.body = alertBody
     content.sound = UNNotificationSound.default()
     let trigger = UNTimeIntervalNotificationTrigger(timeInterval: interval, repeats: false)
-    let request = UNNotificationRequest(identifier: "uuid", content: content, trigger: trigger)
+    let id = String(Date().timeIntervalSince1970 + interval)
+    let request = UNNotificationRequest(identifier: id, content: content, trigger: trigger)
     UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+  }
+
+  static func removeAllNotifications() {
+    UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+    UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
   }
 }

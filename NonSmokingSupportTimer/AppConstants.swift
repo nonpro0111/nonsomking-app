@@ -10,7 +10,7 @@ import Foundation
 
 struct AppConstants {
   static let LocalNotifications = [
-    ["interval": 20.0, "body": "血圧が正常化し始め、健康体に近づいています。"],
+    ["interval": 70.0, "body": "血圧が正常化し始め、健康体に近づいています。"],
     ["interval": 7200.0, "body": "血圧が正常化し始め、健康体に近づいています。"],
     ["interval": 28800.0, "body": "血圧が正常化し始め、健康体に近づいています。"],
     ["interval": 86400.0, "body": "血圧が正常化し始め、健康体に近づいています。"],

@@ -102,7 +102,14 @@ class settingViewController: UIViewController, UITextFieldDelegate {
       let now = Date()
       userDefaults.set(now, forKey: "startAt")
       userDefaults.set(true, forKey: "hasSettings")
+      registLocalNotifications()
     }
     return userDefaults.synchronize()
+  }
+
+  func registLocalNotifications() {
+    for notification in AppConstants.LocalNotifications {
+      LocalNotificationManager.scheduleNotification(title: "順調に禁煙できてます！！",alertBody: notification["body"] as! String, interval: notification["interval"] as! Double)
+    }
   }
 }

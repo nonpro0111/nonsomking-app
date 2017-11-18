@@ -53,9 +53,7 @@ class SmokingInfoViewController: UIViewController {
     priceIconLabel.font = UIFont.fontAwesome(ofSize: 28)
     priceIconLabel.text = String.fontAwesomeIcon(code: "fa-jpy")
     priceValueLabel.text = userData.nonSmokingPrice.currencyFormatStr + " 円"
-    for notification in AppConstants.LocalNotifications {
-      LocalNotificationManager.scheduleNotification(title: "順調に禁煙できてます！！",alertBody: notification["body"] as! String, interval: notification["interval"] as! Double)
-    }
+
     let advice = AppConstants.Advice
     let random = Int(arc4random_uniform(UInt32(advice.count)))
     adviceTextView.text = advice[random]

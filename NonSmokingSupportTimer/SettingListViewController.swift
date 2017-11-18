@@ -40,6 +40,10 @@ class SettingListViewController: UIViewController, UITableViewDelegate, UITableV
         let settingView = storyboard!.instantiateViewController(withIdentifier: "settingView")
         self.present(settingView, animated: true, completion: nil)
       case 1: // 再スタート
+        LocalNotificationManager.removeAllNotifications()
+        for notification in AppConstants.LocalNotifications {
+          LocalNotificationManager.scheduleNotification(title: "順調に禁煙できてます！！",alertBody: notification["body"] as! String, interval: notification["interval"] as! Double)
+        }
         let now = Date()
         UserDefaults.standard.set(now, forKey: "startAt")
         if UserDefaults.standard.synchronize() {
@@ -47,6 +51,7 @@ class SettingListViewController: UIViewController, UITableViewDelegate, UITableV
           self.present(smokingInfo, animated: true, completion: nil)
         }
       case 2: // リセット
+        LocalNotificationManager.removeAllNotifications()
         let appIdentifier:String = Bundle.main.bundleIdentifier!
         UserDefaults.standard.removePersistentDomain(forName: appIdentifier)
         if UserDefaults.standard.synchronize() {
