@@ -9,78 +9,69 @@
 import UIKit
 import FontAwesome_swift
 
-class SmokingInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SmokingInfoViewController: UIViewController {
 
   @IBOutlet weak var reasonTextView: UITextView!
-  @IBOutlet weak var tableView: UITableView!
 
+  @IBOutlet weak var timeIconLabel: UILabel!
+  @IBOutlet weak var timeValueLabel: UILabel!
+
+  @IBOutlet weak var numIconLabel: UILabel!
+  @IBOutlet weak var numValueLabel: UILabel!
+
+  @IBOutlet weak var priceIconLabel: UILabel!
+  @IBOutlet weak var priceValueLabel: UILabel!
+
+  @IBOutlet weak var adviceTextView: UITextView!
   @IBAction func goSettingList(_ sender: UIBarButtonItem) {
     let settingList = storyboard!.instantiateViewController(withIdentifier: "settingListView")
     self.present(settingList, animated: true, completion: nil)
   }
 
   var userData: UserData!
-  var items: Array<Dictionary<String, String>> = []
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLineEtched
     userData = UserData()
 
+    // 禁煙理由
     reasonTextView.text = userData.reason.isEmpty ? "未記入" : userData.reason
-    items = userData.tableViewData()
-    let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateCellInfoValue(timer:)), userInfo: nil, repeats: true)
+    // 禁煙時間
+    timeIconLabel.font = UIFont.fontAwesome(ofSize: 28)
+    timeIconLabel.text = String.fontAwesomeIcon(code: "fa-clock-o")
+    timeValueLabel.text = userData.nonSmokingTime
+
+    let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateNonSmokingTime(timer:)), userInfo: nil, repeats: true)
     timer.fire()
 
+    // 禁煙本数
+    numIconLabel.font = UIFont.fontAwesome(ofSize: 28)
+    numIconLabel.text = String.fontAwesomeIcon(code: "fa-ban")
+    numValueLabel.text = String(userData.nonSmokingNum) + " 本"
+
+    // 節約金額
+    priceIconLabel.font = UIFont.fontAwesome(ofSize: 28)
+    priceIconLabel.text = String.fontAwesomeIcon(code: "fa-jpy")
+    priceValueLabel.text = userData.nonSmokingPrice.currencyFormatStr + " 円"
     for notification in AppConstants.LocalNotifications {
       LocalNotificationManager.scheduleNotification(title: "順調に禁煙できてます！！",alertBody: notification["body"] as! String, interval: notification["interval"] as! Double)
     }
-    // Do any additional setup after loading the view, typically from a nib.
+    let advice = AppConstants.Advice
+    let random = Int(arc4random_uniform(UInt32(advice.count)))
+    adviceTextView.text = advice[random]
   }
 
+  override func viewWillAppear(_ animated: Bool) {
+    self.navigationItem.title = "禁煙"
+  }
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
 
-  func updateCellInfoValue(timer: Timer) {
+  func updateNonSmokingTime(timer: Timer) {
     userData.nonSmokingSec += 1
-    let items = userData.tableViewData()
-
-    let allCells = tableView.visibleCells as! [SmokingInfoItemTableViewCell]
-    for (i, cell) in allCells.enumerated() {
-      cell.infoValue.text = items[i]["value"]
-    }
-
-  }
-  // MARK: - UITableViewDelegate
-  // セルの高さ
-  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 60
-  }
-
-  // MARK: - UITableViewDataSource
-  // セクションの列数
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    if section == 0 {
-      // セル数
-      return 3
-    }
-    return 0
-  }
-
-  // 表示するセルそのものを返すメソッド
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    if indexPath.section == 0 {
-      let cell = tableView.dequeueReusableCell(withIdentifier: "SmokingInfoItem") as! SmokingInfoItemTableViewCell
-      let item = items[indexPath.row]
-
-      cell.infoName.font = UIFont.fontAwesome(ofSize: 45)
-      cell.infoName.text = String.fontAwesomeIcon(code: item["icon"]!)
-      cell.infoValue.text = item["value"]
-      return cell
-    }
-    return UITableViewCell()
+    timeValueLabel.text = userData.nonSmokingTime
   }
 }
 

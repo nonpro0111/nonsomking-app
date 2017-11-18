@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5A06E42814225D67DFFF2C6A /* Pods_NonSmokingSupportTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED425E55C15807754308376E /* Pods_NonSmokingSupportTimer.framework */; };
-		E0507DAC1F37239B0082062C /* SmokingInfoItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0507DAB1F37239B0082062C /* SmokingInfoItemTableViewCell.swift */; };
 		E06CDB871F370E4C00FA6B5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06CDB861F370E4C00FA6B5A /* AppDelegate.swift */; };
 		E06CDB891F370E4C00FA6B5A /* SmokingInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06CDB881F370E4C00FA6B5A /* SmokingInfoViewController.swift */; };
 		E06CDB8C1F370E4C00FA6B5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E06CDB8A1F370E4C00FA6B5A /* Main.storyboard */; };
@@ -26,7 +25,6 @@
 /* Begin PBXFileReference section */
 		926DE47021B5B71148E5A286 /* Pods-NonSmokingSupportTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NonSmokingSupportTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NonSmokingSupportTimer/Pods-NonSmokingSupportTimer.debug.xcconfig"; sourceTree = "<group>"; };
 		DDC17AE6180334084F99FDCF /* Pods-NonSmokingSupportTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NonSmokingSupportTimer.release.xcconfig"; path = "Pods/Target Support Files/Pods-NonSmokingSupportTimer/Pods-NonSmokingSupportTimer.release.xcconfig"; sourceTree = "<group>"; };
-		E0507DAB1F37239B0082062C /* SmokingInfoItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmokingInfoItemTableViewCell.swift; sourceTree = "<group>"; };
 		E06CDB831F370E4C00FA6B5A /* NonSmokingSupportTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NonSmokingSupportTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E06CDB861F370E4C00FA6B5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E06CDB881F370E4C00FA6B5A /* SmokingInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingInfoViewController.swift; sourceTree = "<group>"; };
@@ -94,7 +92,6 @@
 				E0B296731F408C24005A462F /* settingViewController.swift */,
 				E06CDB861F370E4C00FA6B5A /* AppDelegate.swift */,
 				E06CDB881F370E4C00FA6B5A /* SmokingInfoViewController.swift */,
-				E0507DAB1F37239B0082062C /* SmokingInfoItemTableViewCell.swift */,
 				E08D19AF1FA44C7A0093CA84 /* SettingListViewController.swift */,
 				E08D19B11FA44DC60093CA84 /* SettingListTableViewCell.swift */,
 				E06CDB8A1F370E4C00FA6B5A /* Main.storyboard */,
@@ -241,7 +238,6 @@
 				E06CDB891F370E4C00FA6B5A /* SmokingInfoViewController.swift in Sources */,
 				E08D19B01FA44C7A0093CA84 /* SettingListViewController.swift in Sources */,
 				E0AECE461FB82FA500A035B8 /* AppConstants.swift in Sources */,
-				E0507DAC1F37239B0082062C /* SmokingInfoItemTableViewCell.swift in Sources */,
 				E06CDB871F370E4C00FA6B5A /* AppDelegate.swift in Sources */,
 				E0F032661F89FBAE000F4B9F /* UserData.swift in Sources */,
 				E0EA52071FAC419200610D40 /* IntExtension.swift in Sources */,
