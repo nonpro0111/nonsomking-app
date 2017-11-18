@@ -109,7 +109,8 @@ class settingViewController: UIViewController, UITextFieldDelegate {
 
   func registLocalNotifications() {
     for notification in AppConstants.LocalNotifications {
-      LocalNotificationManager.scheduleNotification(title: "順調に禁煙できてます！！",alertBody: notification["body"] as! String, interval: notification["interval"] as! Double)
+      let title = notification["title"] as! String
+      LocalNotificationManager.scheduleNotification(title: title, alertBody: notification["body"] as! String, interval: notification["interval"] as! Double)
     }
   }
 }
