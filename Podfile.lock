@@ -1,12 +1,15 @@
 PODS:
   - FontAwesome.swift (1.2.0)
+  - NendSDK_iOS (4.0.1)
 
 DEPENDENCIES:
   - FontAwesome.swift (= 1.2.0)
+  - NendSDK_iOS
 
 SPEC CHECKSUMS:
   FontAwesome.swift: 60063e3f19ba4801155d4b0f2334ab7585763ab3
+  NendSDK_iOS: d93a346d2bc41ee60fcb508f93e0e9dd9910c502
 
-PODFILE CHECKSUM: f1c29de2bc195b4efb2dab7b86e31271e563c7d3
+PODFILE CHECKSUM: 4eec8698851798941b556628a50dfe98e374ac10
 
 COCOAPODS: 1.2.1

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NendAd
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    NADInterstitial.sharedInstance().loadAd(withApiKey: "66251a775c090843c32da0223654236990b57fca", spotId: "824442")
     let userDefaults = UserDefaults.standard
     if (userDefaults.bool(forKey: "hasSettings")) {
       let date2 = Date(timeInterval: -295200, since: Date())

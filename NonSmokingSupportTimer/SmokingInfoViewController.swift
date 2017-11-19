@@ -8,6 +8,7 @@
 
 import UIKit
 import FontAwesome_swift
+import NendAd
 
 class SmokingInfoViewController: UIViewController {
 
@@ -57,6 +58,13 @@ class SmokingInfoViewController: UIViewController {
     let advice = AppConstants.Advice
     let random = Int(arc4random_uniform(UInt32(advice.count)))
     adviceTextView.text = advice[random]
+
+    NotificationCenter.default.addObserver(self, selector: #selector(SmokingInfoViewController.viewWillEnterForeground(_:)), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+
+  }
+
+  func viewWillEnterForeground(_ notification: Notification?) {
+    NADInterstitial.sharedInstance().showAd(from: self)
   }
 
   override func viewWillAppear(_ animated: Bool) {
