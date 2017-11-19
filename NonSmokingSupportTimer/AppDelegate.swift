@@ -19,9 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     NADInterstitial.sharedInstance().loadAd(withApiKey: "66251a775c090843c32da0223654236990b57fca", spotId: "824442")
     let userDefaults = UserDefaults.standard
     if (userDefaults.bool(forKey: "hasSettings")) {
-      let date2 = Date(timeInterval: -295200, since: Date())
-
-      userDefaults.set(date2, forKey: "startAt")
       self.window = UIWindow(frame: UIScreen.main.bounds)
       let storyboard = UIStoryboard(name: "Main", bundle: nil)
       let initialViewController = storyboard.instantiateViewController(withIdentifier: "smokingInfoView")
