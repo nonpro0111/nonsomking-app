@@ -61,7 +61,7 @@
         <!--Setting View Controller-->
         <scene sceneID="iN8-bp-8zO">
             <objects>
-                <viewController storyboardIdentifier="settingView" id="YKI-2y-AuB" customClass="settingViewController" customModule="NonSmokingSupportTimer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settingView" id="YKI-2y-AuB" customClass="SettingViewController" customModule="NonSmokingSupportTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CHT-qJ-sJC"/>
                         <viewControllerLayoutGuide type="bottom" id="SSu-Qh-ald"/>

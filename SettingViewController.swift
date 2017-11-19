@@ -8,7 +8,7 @@
 
 import UIKit
 
-class settingViewController: UIViewController, UITextFieldDelegate {
+class SettingViewController: UIViewController, UITextFieldDelegate {
 
   @IBOutlet weak var smokingNumLabel: UILabel!
   @IBAction func smokingNumStepperTapped(_ sender: UIStepper) {
