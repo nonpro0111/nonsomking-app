@@ -13,7 +13,7 @@
         <!--Tutorial View Controller-->
         <scene sceneID="Vr5-mw-Zsu">
             <objects>
-                <viewController id="1mi-UP-wkj" customClass="TutorialViewController" customModule="NonSmokingSupportTimer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorialView" id="1mi-UP-wkj" customClass="TutorialViewController" customModule="NonSmokingSupportTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VKK-dV-Z58"/>
                         <viewControllerLayoutGuide type="bottom" id="88k-Bm-lR1"/>

@@ -55,8 +55,8 @@ class SettingListViewController: UIViewController, UITableViewDelegate, UITableV
         let appIdentifier:String = Bundle.main.bundleIdentifier!
         UserDefaults.standard.removePersistentDomain(forName: appIdentifier)
         if UserDefaults.standard.synchronize() {
-          let settingView = storyboard!.instantiateViewController(withIdentifier: "settingView")
-          self.present(settingView, animated: false, completion: nil)
+          let tutorialView = storyboard!.instantiateViewController(withIdentifier: "tutorialView")
+          self.present(tutorialView, animated: false, completion: nil)
         }
       default:
         print("エラー")
