@@ -42,7 +42,10 @@ class SettingListViewController: UIViewController, UITableViewDelegate, UITableV
       case 1: // 再スタート
         LocalNotificationManager.removeAllNotifications()
         for notification in AppConstants.LocalNotifications {
-          LocalNotificationManager.scheduleNotification(title: "順調に禁煙できてます！！",alertBody: notification["body"] as! String, interval: notification["interval"] as! Double)
+          let title = notification["title"] as! String
+          let body = notification["body"] as! String
+          let interval = notification["interval"] as! Double
+          LocalNotificationManager.scheduleNotification(title: title, alertBody: body, interval: interval)
         }
         let now = Date()
         UserDefaults.standard.set(now, forKey: "startAt")
