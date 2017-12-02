@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E0507DAC1F37239B0082062C /* SmokingInfoItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0507DAB1F37239B0082062C /* SmokingInfoItemTableViewCell.swift */; };
+		5A06E42814225D67DFFF2C6A /* Pods_NonSmokingSupportTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED425E55C15807754308376E /* Pods_NonSmokingSupportTimer.framework */; };
+		E02F9DF71FC046CE00E65048 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02F9DF61FC046CE00E65048 /* TutorialViewController.swift */; };
 		E06CDB871F370E4C00FA6B5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06CDB861F370E4C00FA6B5A /* AppDelegate.swift */; };
 		E06CDB891F370E4C00FA6B5A /* SmokingInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06CDB881F370E4C00FA6B5A /* SmokingInfoViewController.swift */; };
 		E06CDB8C1F370E4C00FA6B5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E06CDB8A1F370E4C00FA6B5A /* Main.storyboard */; };
@@ -15,13 +16,17 @@
 		E06CDB911F370E4C00FA6B5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E06CDB8F1F370E4C00FA6B5A /* LaunchScreen.storyboard */; };
 		E08D19B01FA44C7A0093CA84 /* SettingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08D19AF1FA44C7A0093CA84 /* SettingListViewController.swift */; };
 		E08D19B21FA44DC60093CA84 /* SettingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08D19B11FA44DC60093CA84 /* SettingListTableViewCell.swift */; };
-		E0B296741F408C24005A462F /* settingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B296731F408C24005A462F /* settingViewController.swift */; };
+		E0AECE441FB8293E00A035B8 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AECE431FB8293E00A035B8 /* LocalNotificationManager.swift */; };
+		E0AECE461FB82FA500A035B8 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AECE451FB82FA500A035B8 /* AppConstants.swift */; };
+		E0B296741F408C24005A462F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B296731F408C24005A462F /* SettingViewController.swift */; };
 		E0EA52071FAC419200610D40 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EA52061FAC419200610D40 /* IntExtension.swift */; };
 		E0F032661F89FBAE000F4B9F /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F032651F89FBAE000F4B9F /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E0507DAB1F37239B0082062C /* SmokingInfoItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmokingInfoItemTableViewCell.swift; sourceTree = "<group>"; };
+		926DE47021B5B71148E5A286 /* Pods-NonSmokingSupportTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NonSmokingSupportTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NonSmokingSupportTimer/Pods-NonSmokingSupportTimer.debug.xcconfig"; sourceTree = "<group>"; };
+		DDC17AE6180334084F99FDCF /* Pods-NonSmokingSupportTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NonSmokingSupportTimer.release.xcconfig"; path = "Pods/Target Support Files/Pods-NonSmokingSupportTimer/Pods-NonSmokingSupportTimer.release.xcconfig"; sourceTree = "<group>"; };
+		E02F9DF61FC046CE00E65048 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		E06CDB831F370E4C00FA6B5A /* NonSmokingSupportTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NonSmokingSupportTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E06CDB861F370E4C00FA6B5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E06CDB881F370E4C00FA6B5A /* SmokingInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingInfoViewController.swift; sourceTree = "<group>"; };
@@ -32,10 +37,12 @@
 		E06CDB991F370E6B00FA6B5A /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E08D19AF1FA44C7A0093CA84 /* SettingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingListViewController.swift; sourceTree = "<group>"; };
 		E08D19B11FA44DC60093CA84 /* SettingListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingListTableViewCell.swift; sourceTree = "<group>"; };
-		E0B296731F408C24005A462F /* settingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = settingViewController.swift; path = ../settingViewController.swift; sourceTree = "<group>"; };
-		E0E635831F9F926E0063C57D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		E0AECE431FB8293E00A035B8 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
+		E0AECE451FB82FA500A035B8 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		E0B296731F408C24005A462F /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = ../SettingViewController.swift; sourceTree = "<group>"; };
 		E0EA52061FAC419200610D40 /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntExtension.swift; path = ../IntExtension.swift; sourceTree = "<group>"; };
 		E0F032651F89FBAE000F4B9F /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		ED425E55C15807754308376E /* Pods_NonSmokingSupportTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NonSmokingSupportTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +50,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A06E42814225D67DFFF2C6A /* Pods_NonSmokingSupportTimer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7813384E0B0F013F3F4055C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED425E55C15807754308376E /* Pods_NonSmokingSupportTimer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E06CDB7A1F370E4C00FA6B5A = {
 			isa = PBXGroup;
 			children = (
 				E06CDB851F370E4C00FA6B5A /* NonSmokingSupportTimer */,
 				E06CDB841F370E4C00FA6B5A /* Products */,
+				ED222F925ECFE3649D792842 /* Pods */,
+				7813384E0B0F013F3F4055C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,12 +86,14 @@
 		E06CDB851F370E4C00FA6B5A /* NonSmokingSupportTimer */ = {
 			isa = PBXGroup;
 			children = (
+				E0AECE431FB8293E00A035B8 /* LocalNotificationManager.swift */,
+				E0AECE451FB82FA500A035B8 /* AppConstants.swift */,
 				E0EA52061FAC419200610D40 /* IntExtension.swift */,
 				E0F032651F89FBAE000F4B9F /* UserData.swift */,
-				E0B296731F408C24005A462F /* settingViewController.swift */,
+				E02F9DF61FC046CE00E65048 /* TutorialViewController.swift */,
+				E0B296731F408C24005A462F /* SettingViewController.swift */,
 				E06CDB861F370E4C00FA6B5A /* AppDelegate.swift */,
 				E06CDB881F370E4C00FA6B5A /* SmokingInfoViewController.swift */,
-				E0507DAB1F37239B0082062C /* SmokingInfoItemTableViewCell.swift */,
 				E08D19AF1FA44C7A0093CA84 /* SettingListViewController.swift */,
 				E08D19B11FA44DC60093CA84 /* SettingListTableViewCell.swift */,
 				E06CDB8A1F370E4C00FA6B5A /* Main.storyboard */,
@@ -84,6 +104,15 @@
 			path = NonSmokingSupportTimer;
 			sourceTree = "<group>";
 		};
+		ED222F925ECFE3649D792842 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				926DE47021B5B71148E5A286 /* Pods-NonSmokingSupportTimer.debug.xcconfig */,
+				DDC17AE6180334084F99FDCF /* Pods-NonSmokingSupportTimer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,9 +120,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E06CDB951F370E4C00FA6B5A /* Build configuration list for PBXNativeTarget "NonSmokingSupportTimer" */;
 			buildPhases = (
+				DADE6C16D54535F96D856904 /* [CP] Check Pods Manifest.lock */,
 				E06CDB7F1F370E4C00FA6B5A /* Sources */,
 				E06CDB801F370E4C00FA6B5A /* Frameworks */,
 				E06CDB811F370E4C00FA6B5A /* Resources */,
+				37861887C50F9265753DEC88 /* [CP] Embed Pods Frameworks */,
+				C6EA06BA559114DE94C00320 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -116,6 +148,7 @@
 				TargetAttributes = {
 					E06CDB821F370E4C00FA6B5A = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = Y9ZKTVKU78;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -151,6 +184,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		37861887C50F9265753DEC88 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NonSmokingSupportTimer/Pods-NonSmokingSupportTimer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6EA06BA559114DE94C00320 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NonSmokingSupportTimer/Pods-NonSmokingSupportTimer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DADE6C16D54535F96D856904 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E06CDB7F1F370E4C00FA6B5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -158,11 +239,13 @@
 			files = (
 				E06CDB891F370E4C00FA6B5A /* SmokingInfoViewController.swift in Sources */,
 				E08D19B01FA44C7A0093CA84 /* SettingListViewController.swift in Sources */,
-				E0507DAC1F37239B0082062C /* SmokingInfoItemTableViewCell.swift in Sources */,
+				E02F9DF71FC046CE00E65048 /* TutorialViewController.swift in Sources */,
+				E0AECE461FB82FA500A035B8 /* AppConstants.swift in Sources */,
 				E06CDB871F370E4C00FA6B5A /* AppDelegate.swift in Sources */,
 				E0F032661F89FBAE000F4B9F /* UserData.swift in Sources */,
 				E0EA52071FAC419200610D40 /* IntExtension.swift in Sources */,
-				E0B296741F408C24005A462F /* settingViewController.swift in Sources */,
+				E0AECE441FB8293E00A035B8 /* LocalNotificationManager.swift in Sources */,
+				E0B296741F408C24005A462F /* SettingViewController.swift in Sources */,
 				E08D19B21FA44DC60093CA84 /* SettingListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,7 +257,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				E06CDB8B1F370E4C00FA6B5A /* Base */,
-				E0E635831F9F926E0063C57D /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -288,25 +370,33 @@
 		};
 		E06CDB961F370E4C00FA6B5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 926DE47021B5B71148E5A286 /* Pods-NonSmokingSupportTimer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y9ZKTVKU78;
 				INFOPLIST_FILE = NonSmokingSupportTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nomuyoshi.NonSmokingSupportTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		E06CDB971F370E4C00FA6B5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDC17AE6180334084F99FDCF /* Pods-NonSmokingSupportTimer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y9ZKTVKU78;
 				INFOPLIST_FILE = NonSmokingSupportTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nomuyoshi.NonSmokingSupportTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

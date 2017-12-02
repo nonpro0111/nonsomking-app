@@ -13,7 +13,7 @@ class SettingListViewController: UIViewController, UITableViewDelegate, UITableV
   @IBOutlet weak var tableView: UITableView!
   @IBAction func backSmokingInfo(_ sender: UIBarButtonItem) {
     let smokingInfo = storyboard!.instantiateViewController(withIdentifier: "smokingInfoView")
-    self.present(smokingInfo, animated: true, completion: nil)
+    self.present(smokingInfo, animated: false, completion: nil)
   }
   let items = ["喫煙データ変更", "禁煙再スタート", "リセット"]
 
@@ -30,7 +30,7 @@ class SettingListViewController: UIViewController, UITableViewDelegate, UITableV
 
   // MARK: - UITableViewDelegate
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 40
+    return 50
   }
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -38,20 +38,28 @@ class SettingListViewController: UIViewController, UITableViewDelegate, UITableV
       switch indexPath.row {
       case 0: // 設定変更
         let settingView = storyboard!.instantiateViewController(withIdentifier: "settingView")
-        self.present(settingView, animated: true, completion: nil)
+        self.present(settingView, animated: false, completion: nil)
       case 1: // 再スタート
+        LocalNotificationManager.removeAllNotifications()
+        for notification in AppConstants.LocalNotifications {
+          let title = notification["title"] as! String
+          let body = notification["body"] as! String
+          let interval = notification["interval"] as! Double
+          LocalNotificationManager.scheduleNotification(title: title, alertBody: body, interval: interval)
+        }
         let now = Date()
         UserDefaults.standard.set(now, forKey: "startAt")
         if UserDefaults.standard.synchronize() {
           let smokingInfo = storyboard!.instantiateViewController(withIdentifier: "smokingInfoView")
-          self.present(smokingInfo, animated: true, completion: nil)
+          self.present(smokingInfo, animated: false, completion: nil)
         }
       case 2: // リセット
+        LocalNotificationManager.removeAllNotifications()
         let appIdentifier:String = Bundle.main.bundleIdentifier!
         UserDefaults.standard.removePersistentDomain(forName: appIdentifier)
         if UserDefaults.standard.synchronize() {
-          let settingView = storyboard!.instantiateViewController(withIdentifier: "settingView")
-          self.present(settingView, animated: true, completion: nil)
+          let tutorialView = storyboard!.instantiateViewController(withIdentifier: "tutorialView")
+          self.present(tutorialView, animated: false, completion: nil)
         }
       default:
         print("エラー")
