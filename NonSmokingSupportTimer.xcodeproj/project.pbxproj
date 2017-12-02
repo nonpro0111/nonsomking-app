@@ -40,7 +40,6 @@
 		E0AECE431FB8293E00A035B8 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		E0AECE451FB82FA500A035B8 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		E0B296731F408C24005A462F /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = ../SettingViewController.swift; sourceTree = "<group>"; };
-		E0E635831F9F926E0063C57D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		E0EA52061FAC419200610D40 /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntExtension.swift; path = ../IntExtension.swift; sourceTree = "<group>"; };
 		E0F032651F89FBAE000F4B9F /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		ED425E55C15807754308376E /* Pods_NonSmokingSupportTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NonSmokingSupportTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -258,7 +257,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				E06CDB8B1F370E4C00FA6B5A /* Base */,
-				E0E635831F9F926E0063C57D /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

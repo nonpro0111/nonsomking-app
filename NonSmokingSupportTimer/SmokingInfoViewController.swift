@@ -37,6 +37,11 @@ class SmokingInfoViewController: UIViewController {
 
     // 禁煙理由
     reasonTextView.text = userData.reason.isEmpty ? "未記入" : userData.reason
+
+    // テキスト量に合わせて高さ指定
+    let height = reasonTextView.sizeThatFits(CGSize(width: reasonTextView.frame.size.width, height: CGFloat.greatestFiniteMagnitude)).height
+    reasonTextView.heightAnchor.constraint(equalToConstant: height).isActive = true
+
     // 禁煙時間
     timeIconLabel.font = UIFont.fontAwesome(ofSize: 28)
     timeIconLabel.text = String.fontAwesomeIcon(code: "fa-clock-o")
