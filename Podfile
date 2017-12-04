@@ -6,6 +6,6 @@ target 'NonSmokingSupportTimer' do
   use_frameworks!
 
   # Pods for NonSmokingSupportTimer
-  pod 'FontAwesome.swift', '1.2.0'
+  pod 'FontAwesome.swift'
   pod 'NendSDK_iOS'
 end

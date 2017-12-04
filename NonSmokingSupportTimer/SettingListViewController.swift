@@ -15,7 +15,7 @@ class SettingListViewController: UIViewController, UITableViewDelegate, UITableV
     let smokingInfo = storyboard!.instantiateViewController(withIdentifier: "smokingInfoView")
     self.present(smokingInfo, animated: false, completion: nil)
   }
-  let items = ["喫煙データ変更", "禁煙再スタート", "リセット"]
+  @objc let items = ["喫煙データ変更", "禁煙再スタート", "リセット"]
 
   override func viewDidLoad() {
     super.viewDidLoad()

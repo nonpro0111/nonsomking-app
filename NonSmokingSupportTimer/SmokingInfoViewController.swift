@@ -68,7 +68,7 @@ class SmokingInfoViewController: UIViewController {
 
   }
 
-  func viewWillEnterForeground(_ notification: Notification?) {
+  @objc func viewWillEnterForeground(_ notification: Notification?) {
     NADInterstitial.sharedInstance().showAd(from: self)
   }
 
@@ -80,7 +80,7 @@ class SmokingInfoViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
-  func updateNonSmokingTime(timer: Timer) {
+  @objc func updateNonSmokingTime(timer: Timer) {
     userData.nonSmokingSec += 1
     timeValueLabel.text = userData.nonSmokingTime
   }
