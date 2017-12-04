@@ -52,13 +52,6 @@ struct UserData {
   var nonSmokingPrice: Int {
     return price * self.nonSmokingNum / 20
   }
-
-  func tableViewData() -> Array<Dictionary<String, String>>{
-    return [
-      ["name": "禁煙継続時間", "icon": "fa-clock-o", "value": self.nonSmokingTime],
-      ["name": "禁煙本数", "icon": "fa-ban", "value": String(self.nonSmokingNum) + "本"],
-      ["name": "禁煙金額", "icon": "fa-jpy", "value": self.nonSmokingPrice.currencyFormatStr + "円"]
-    ]
-  }
+  
   
 }

@@ -64,12 +64,12 @@ class SettingViewController: UIViewController, UITextFieldDelegate {
     return true
   }
 
-  func setReasonTextField() {
+  @objc func setReasonTextField() {
     reasonTextField.returnKeyType = UIReturnKeyType.done
     reasonTextField.delegate = self
   }
 
-  func setDefaultValues(hasSetting: Bool) {
+  @objc func setDefaultValues(hasSetting: Bool) {
     var num = 20, price = 440, reason = ""
     if (hasSettings) {
       let userData = UserData()
@@ -84,14 +84,14 @@ class SettingViewController: UIViewController, UITextFieldDelegate {
     reasonTextField.text = reason
   }
 
-  func setUpButtonStyle() {
+  @objc func setUpButtonStyle() {
     setUpButton.setTitle("設定完了", for: UIControlState.normal)
     setUpButton.setTitleColor(UIColor.white, for: UIControlState.normal)
     setUpButton.backgroundColor = UIColor(red: 43/255, green: 145/255, blue: 254/255, alpha: 1)
     setUpButton.layer.cornerRadius = 2
   }
 
-  func setSmokingInfo(num: Int, price: Int, reason: String?) -> Bool {
+  @objc func setSmokingInfo(num: Int, price: Int, reason: String?) -> Bool {
     let userDefaults = UserDefaults.standard
     userDefaults.set(num, forKey: "smokingNum")
     userDefaults.set(price, forKey: "price")
@@ -107,7 +107,7 @@ class SettingViewController: UIViewController, UITextFieldDelegate {
     return userDefaults.synchronize()
   }
 
-  func registLocalNotifications() {
+  @objc func registLocalNotifications() {
     for notification in AppConstants.LocalNotifications {
       let title = notification["title"] as! String
       LocalNotificationManager.scheduleNotification(title: title, alertBody: notification["body"] as! String, interval: notification["interval"] as! Double)

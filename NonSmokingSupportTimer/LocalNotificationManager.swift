@@ -11,7 +11,7 @@ import UIKit
 import UserNotifications
 
 class LocalNotificationManager: NSObject {
-  static func registNotificationSetting(){
+  @objc static func registNotificationSetting(){
     let center = UNUserNotificationCenter.current()
     center.requestAuthorization(options: [.alert, .sound], completionHandler: {(granted, _) in
       if granted {
@@ -22,7 +22,7 @@ class LocalNotificationManager: NSObject {
     })
   }
 
-  static func scheduleNotification(title: String, alertBody: String, interval: Double) {
+  @objc static func scheduleNotification(title: String, alertBody: String, interval: Double) {
     let content = UNMutableNotificationContent()
     content.title = title
     content.body = alertBody
@@ -33,7 +33,7 @@ class LocalNotificationManager: NSObject {
     UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
   }
 
-  static func removeAllNotifications() {
+  @objc static func removeAllNotifications() {
     UNUserNotificationCenter.current().removeAllDeliveredNotifications()
     UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
   }
